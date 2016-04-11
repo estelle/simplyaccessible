@@ -5,26 +5,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="css/consumerapp.css" rel="stylesheet">
-  <script>
-
-function changeClassFocus (id) {
-  var label = document.querySelector('[for=' + id + ']'),
-         el = document.getElementById(id);
-
-  label.classList.add('focus');
-  label.classList.remove('empty');
-}
-
-function changeClassBlur (id) {
-  var label = document.querySelector('[for=' + id + ']'),
-         el = document.getElementById(id);
-
-  label.classList.remove('focus');
-  if(!el.value) {
-    label.classList.add('empty');
-  }
-}
- </script>
 </head>
 
 <body class="consumer">
@@ -334,6 +314,7 @@ function changeClassBlur (id) {
     <!--<div></div>-->
   </div>
 
+<script src="js/site.js"></script>
 </body>
 
 </html>

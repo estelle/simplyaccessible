@@ -5,76 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="css/consumerapp.css" rel="stylesheet">
-  <script>
 
-function init() {
-  activateLanguageSelector();
-  focusblurEvents();
-  selectLanguage();
-}
-
-function activateLanguageSelector () {
-  var openclose = document.querySelector('#languageIndicator > a');
-  openclose.addEventListener('click', function() {
-      opencloseLanguageSelector();
-  });
-}
-
-function opencloseLanguageSelector () {
-    var oc = document.getElementById('languageOpenClose'),
-        footer = document.getElementsByTagName('footer')[0];
-    oc.classList.toggle('up');
-    oc.classList.toggle('down');
-    footer.classList.toggle('open');
-    footer.classList.toggle('closed');
-}
-
-function selectLanguage () {
-  var radios = document.querySelectorAll('#languageSelector input'),
-      i;
-
-  for (i = 0; i < radios.length; i++) {
-    radios[i].addEventListener('click', function (e) {
-        // change the country
-        var country = e.target.value;
-        document.getElementById('languageFlag').setAttribute('class', "lang" + country + " icon");
-        // close the country 
-        opencloseLanguageSelector();
-    })
-  }  
-
-
-}
-
-function focusblurEvents () {
- var actionItems = document.querySelectorAll('.formControl input'),
-      i;
-
-  for (i = 0; i < actionItems.length; i++) {
-    actionItems[i].addEventListener('blur', function(e){changeClassBlur(e);});
-    actionItems[i].addEventListener('focus', function(e){changeClassFocus(e);});
-  }
-}
-
-function changeClassFocus (e) {
-  var id = e.target.id;
-  var label = document.querySelector('[for=' + id + ']');
-
-  label.classList.add('focus');
-  label.classList.remove('empty');
-}
-
-function changeClassBlur (e) {
-  var id = e.target.id,
-    label = document.querySelector('[for=' + id + ']');
-
-  label.classList.remove('focus');
-  if(!e.target.value) {
-    label.classList.add('empty');
-  }
-}
-window.onload = function () {init();};
- </script>
 </head>
 
 <body class="consumer">
@@ -222,5 +153,6 @@ window.onload = function () {init();};
 </footer>
   <div class="view-modal-portal"></div>
 
+<script src="js/site.js"></script>
 </body>
 </html>

@@ -5,89 +5,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="css/consumerapp.css" rel="stylesheet">
-  <script>
-function init() {
-  //activateLanguageSelector();
-  focusblurEvents();
-  selectLanguage();
-  activateCarousels();
-}
-
-function activateLanguageSelector () {
-  var openclose = document.querySelector('#languageIndicator > a');
-  openclose.addEventListener('click', function() {
-      opencloseLanguageSelector();
-  });
-}
-
-function opencloseLanguageSelector () {
-    var oc = document.getElementById('languageOpenClose'),
-        footer = document.getElementsByTagName('footer')[0];
-    oc.classList.toggle('up');
-    oc.classList.toggle('down');
-    footer.classList.toggle('open');
-    footer.classList.toggle('closed');
-}
-
-function selectLanguage () {
-  var radios = document.querySelectorAll('#languageSelector input'),
-      i;
-
-  for (i = 0; i < radios.length; i++) {
-    radios[i].addEventListener('click', function (e) {
-        // change the country
-        var country = e.target.value;
-        document.getElementById('languageFlag').setAttribute('class', "lang" + country + " icon");
-        // close the country 
-        opencloseLanguageSelector();
-    })
-  }  
-}
-
-function focusblurEvents () {
- var actionItems = document.querySelectorAll('.formControl input'),
-      i;
-
-  for (i = 0; i < actionItems.length; i++) {
-    actionItems[i].addEventListener('blur', function(e){changeClassBlur(e);});
-    actionItems[i].addEventListener('focus', function(e){changeClassFocus(e);});
-  }
-}
-
-function changeClassFocus (e) {
-  var id = e.target.id;
-  var label = document.querySelector('[for=' + id + ']');
-
-  label.classList.add('focus');
-  label.classList.remove('empty');
-}
-
-function changeClassBlur (e) {
-  var id = e.target.id,
-    label = document.querySelector('[for=' + id + ']');
-
-  label.classList.remove('focus');
-  if(!e.target.value) {
-    label.classList.add('empty');
-  }
-}
-function activateCarousels () {
-  var radios = document.querySelectorAll('.carousel-radios input'),
-      i = 0,
-      l = radios.length;
-  for(i = 0; i < l; i++) {
-    radios[i].addEventListener('change', function (e) {
-      carouselChange(e);
-    })
-  }
-}
-function carouselChange (e) {
-  var ulClass = e.target.name,
-      ul = document.querySelector('.' + ulClass);
-  ul.setAttribute('class', ulClass + ' left' + e.target.value);
-}
-window.onload = function () {init();};
- </script>
 </head>
 
 <body class="consumer">
@@ -110,8 +27,10 @@ window.onload = function () {init();};
 
         <section>
           <h2>My Cards</h2>
-          <a href="editcard.html" class="btn button-link">Edit<span class="a11y"> your card</span></a>
-          <a href="addcard.html" class="btn button-link">Add<span class="a11y"> a new card</span></a>
+          <div class="buttons">
+            <a href="editcard.html" class="btn button-link">Edit<span class="a11y"> your card</span></a>
+            <a href="addcard.html" class="btn button-link">Add<span class="a11y"> a new card</span></a>
+          </div>
           <p class="instructions">Add a card to get the full benefits of Visa Checkout.</p>
         </section>
 
@@ -121,7 +40,7 @@ window.onload = function () {init();};
           <fieldset>
           <legend>Select an address to edit:</legend>
           <div class="carousel">
-            <span class="backward" disabled aria-hidden="true"></span>
+            <span class="backward" data-move="backward" data-carousel="shipping-addresses" hidden aria-hidden="true"></span>
             <ul class="shipping-addresses left0">
               <li>
                 <label for="address1">
@@ -141,16 +60,16 @@ window.onload = function () {init();};
               </li>
               <li>
                 <label for="address3">
-                  <p>Sonia Levy</p>
-                  <p>613 Zollinger Way</p>
+                  <p>Sonia Weyl</p>
+                  <p>673 Zollinger Drive</p>
                   <p>Merion Station, PA  19066</p>
                   <p>6014561234</p>
                 </label>
               </li>
               <li>
                 <label for="address4">
-                  <p>Dominique Weyl</p>
-                  <p>133 Brewster Road</p>
+                  <p>Dominique Brody</p>
+                  <p>14 Fiske Avenue</p>
                   <p>Waltham, MA 02451</p>
                   <p>7818931002</p>
                 </label>
@@ -165,14 +84,14 @@ window.onload = function () {init();};
               </li>
               <li>
                 <label for="address6">
-                  <p>Guy Weyl</p>
-                  <p>287 Kent St Apt 1</p>
-                  <p>Brookline, MA  02446</p>
-                  <p>6177359395</p>
+                  <p>George Weyl</p>
+                  <p>23 Somerset Road</p>
+                  <p>Lexington, MA  02446</p>
+                  <p>6178622799</p>
                 </label>
               </li>
             </ul>
-            <span class="forward" aria-hidden="true"></span>
+            <span class="forward" data-move="forward" data-carousel="shipping-addresses" hidden aria-hidden="true"></span>
             </div>
             <ul id="addressradios" class="carousel-radios">
               <li>
@@ -244,5 +163,6 @@ window.onload = function () {init();};
           </small>
     </footer>
 
+<script src="js/site.js"></script>
 </body>
 </html>

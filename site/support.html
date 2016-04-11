@@ -5,31 +5,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="css/consumerapp.css" rel="stylesheet">
-  <script>
-function init() {
-  openDetails();
-}
 
-function openDetails () {
-  var summary = document.querySelectorAll('summary'),
-      i;
-
-  for (i = 0; i < summary.length; i++) {
-    summary[i].addEventListener('click', function(){
-      var openSummary = document.querySelector('.open');
-      if(openSummary && openSummary != this.parentNode) {
-        openSummary.classList.remove('open');
-      }
-      this.parentNode.classList.toggle('open');
-    });
-  }
-}
-window.onload = function () {
-    init();
-};
-  </script>
 </head>
-<bodY>
+<body>
 <div id="main" class="consumer">
 
       <header>
@@ -171,5 +149,6 @@ For more information on MasterCard SecureCode, please visit <a href="http://www.
           </small>
     </footer>
 
+<script src="js/site.js"></script>
 </body>
 </html>
