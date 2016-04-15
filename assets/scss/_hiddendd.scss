@@ -1,0 +1,22 @@
+@import "variables";
+
+.hidden_dd {
+	dt {
+		margin-bottom: 0;
+		margin-top: 0.2rem;
+		width: 50%;
+		padding-left: 5px;
+		font-weight: bold;
+		display: block;
+		clear: both;
+		color: $background;
+		background-color: $ilblue;
+	}
+	dd {
+		display: none;
+		font-size: 1rem;
+	}
+	dt:hover + dd {
+    display: inherit;
+}
+}

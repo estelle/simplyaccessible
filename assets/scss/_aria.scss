@@ -1,0 +1,12 @@
+@import "variables";
+.aria {
+	margin-left: 30vw;
+	white-space: pre;
+  	padding: 20vh 0;
+  	letter-spacing: 0.25px;
+  	font-size: 8vh;
+	span {
+		color: $ilblue;
+		padding-right: 0.1rem;
+	}
+}

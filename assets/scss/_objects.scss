@@ -1,0 +1,13 @@
+@import "variables";
+/* OBJECT PAGES */
+.object header {
+  position:absolute;
+  top: 10px;
+  width: 100%;
+  text-align:center;
+  background-color: $darken;
+  left:0;
+}
+.slide.object {padding:0;}
+.object object {width: 100%; height: 100%;}
+.notes, .temphidden {display: none;}

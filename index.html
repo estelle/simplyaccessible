@@ -1,0 +1,280 @@
+<!DOCTYPE HTML>
+<html>
+<head> 
+    <!--[if gte IE 9]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]--> 
+    <!--[if lt IE 9]><meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1" /><![endif]--> 
+<meta charset="utf-8" />
+    <title>Simply Accessible Web Performance</title>
+<!--
+Made by: Put Your Name Here
+Copyright:  CC-SA-NC-BY - Creative Commons Attribution-NonCommercial-ShareAlike
+Based on: http://estelle.github.com/slides 
+-->    
+<link rel="stylesheet" href="assets/css/index.css">
+</head>
+
+<body> 
+<div id="presentation">
+   <div id="slides">
+   
+   
+  <div class="slide intro">
+    <section class="content">
+    <h1 style="font-size: 3rem; margin-top: 10%;">Simply Accessible Web Performance</h1>
+      <h2>Estelle Weyl</h2>
+      <p><a href="http://estelle.github.io/rwdpanacea">http://instartlogic.github.io/webdevcon</a></p>
+      <small>By developing with web standards, you can create accessible, performant web sites. Semantic markup helps ensure accessibility while reducing the need for frameworks. Write semantic HTML and leverage CSS Selectors and the cascade, to reduce your CSS and JS by up to 95% and obliterate your queue of accessibility bugs.</small>
+    </section>
+</div>
+
+<div class="slide">
+<section class="content">
+<h1>Estelle Weyl</h1>
+<h2><a href="http://www.standardista.com">www.standardista.com</a><br>
+<a href="http://www.instartlogic.com/blog">www.instartlogic.com/blog</a></h2><h2><a href="http://www.twitter.com/webdevtips">@webdevtips</a><br><a href="http://www.twitter.com/estellevw">@estellevw</a><br><a href="http://www.twitter.com/standardista">@standardista</a></h2>
+<div class="floatright">
+  <img src="http://akamaicovers.oreilly.com/images/9780987467485/cat.gif" alt="HTML5 and CSS3 for the Real World">
+  <img src="http://akamaicovers.oreilly.com/images/0636920041658/rc_cat.gif" alt="Animations and Transitions with CSS"/>
+  <img src="http://akamaicovers.oreilly.com/images/0636920021711/cat.gif" alt="MObile HTML5" />
+  \<img src="http://akamaicovers.oreilly.com/images/0636920025955/cat.gif" alt="Web Performance Daybook"/></div>
+</section>
+</div>
+ 
+
+
+<div class="slide intro switchletters">
+<header><h1 aria-label="Accessibility and Performance Made Simple with Web Standards"><span class=a>Simpl<i>y</i></span>
+  <span class=b>Accessib<i>le</i></span>
+<span class=c>Web</span>
+  <span class=d>Performance</span></h1></header>
+</div>
+
+<div class="slide intro">
+<header><h1>Accessibility</h1></header>
+</div>
+
+
+
+<!-- slide -->
+<div class="slide blind">
+<h1>Screen Reader experience</h1>
+<p><a href="" aria-label="don't click this link. It's a example fo bad user experience">click here</a>
+</p>
+</div>
+
+
+<!-- Slide -->
+<div class="slide deaf">
+
+<h1>Hearing impaired experience</h1>
+<section>
+<iframe src="https://vine.co/v/iIEqKFz1uOY/embed/simple" width="600" height="600" frameborder="0"></iframe><script src="https://platform.vine.co/static/scripts/embed.js"></script>
+  </video>
+  </section>
+</div>
+
+<!-- slide -->
+<div class="slide deaf colorblind">
+<h1>Color Blindness experience</h1>
+</div>
+      <!-- slide -->
+   <div class="slide tweet" style="text-align: center; padding-top: 40px;"> 
+<a href="https://twitter.com/dugboticus/status/720542337185771520"><img alt="Disability: a mismatch in interaction between the features of a person’s body and the features of the environment in which they live. &mdash; Alistair Duggin (@dugboticus) April 14, 2016" src="assets/images/tweetdisability.png"></a>
+</div>
+
+
+<div class="slide graph">
+
+<div class="arrow">
+		<div>permanent</div>
+		<div class="border"></div>
+		<div>situational</div>
+	</div>
+<ul>
+	<li>Parapalegic</li>
+	<li>Broken Leg</li>
+	<li>Stillettos</li>
+</ul>
+
+<ul>
+	<li>Blind</li>
+	<li>Reading Glasses</li>
+	<li>Glare from the sun</li>
+</ul>
+<ul>
+	<li>Dyslexic</li>
+	<li>Medicated</li>
+	<li>Distracted</li>
+</ul>
+
+<ul>
+	<li>Quadrapalegic</li>
+	<li>Broken Arm</li>
+	<li>Holding a baby</li>
+</ul>
+
+<ul>
+	<li>Deaf</li>
+	<li>At the airport</li>
+	<li>Broken speaker</li>
+</ul>
+
+
+	<div class="arrow">
+		<div>permanent</div>
+		<div class="border"></div>
+		<div>situational</div>
+	</div>
+</div>
+<!-- slide -->
+
+<div class="slide">
+<h1 class="aria"><span>A</span>ccessible
+<span>R</span>ich
+<span>I</span>nternet 
+<span>A</span>pplications</h1>
+</div>
+
+
+
+
+<div class="slide tweet">
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">The 1st rule of ARIA use is if you can use a native HTML element or attribute with the semantics behavior already built in, do that instead!</p>&mdash; Estelle Weyl (@estellevw) <a href="https://twitter.com/estellevw/status/702935029807058944">February 25, 2016</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
+
+
+<div class="slide intro">
+<header><h1>Performance</h1></header>
+</div>
+
+
+
+      <!-- slide -->
+   <div class="slide tweet"> 
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">I remember when 3G was primary mobile speed. It was slow but still worked, so why now when my phone says 3G it becomes completely useless.</p>&mdash; Stephen Gundee (@StephenGundee) <a href="https://twitter.com/StephenGundee/status/712650972133138433">March 23, 2016</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+
+      <!-- slide -->
+   <div class="slide"> 
+     <header>
+     	<h1>November 2010</h2>
+     </header> 
+    <img  style="height: 80vh; display: inline-block; margin: auto;" id="bytesperpage2" class="chart" src="http://chart.googleapis.com/chart?chs=700x394&amp;cht=p&amp;chco=226daa&amp;chd=t:416,34,25,113,2,22&amp;chds=0,416&amp;chdlp=b&amp;chdl=total 702 kB&amp;chl=Images+-+416+kB%7CHTML+-+34+kB%7CStylesheets+-+25+kB%7CScripts+-+113+kB%7CFonts+-+2+kB%7COther+-+22+kB&amp;chma=|5&amp;chtt=Average+Bytes+per+Page+by+Content+Type+November+2010" alt='In 2010, content was Images=416kb, HTML=34kb, Stylesheets=25kb, Scripts=113kb, Fonts=2kb, and Other=22kb for a total of 702kb'>
+
+   </div> 
+
+
+   <!-- slide -->
+   <div class="slide"> 
+     <header>
+     	<h1>April 2016</h2>
+     </header> 
+    <img style="height: 80vh; display: inline-block; margin: auto;" id="bytesperpage" class="chart" src="http://chart.googleapis.com/chart?chs=700x394&amp;cht=p&amp;chco=226daa&amp;is3D=true&amp;chd=t:1460,67,77,367,123,193,4&amp;chds=0,1460&amp;chdlp=b&amp;chdl=total 2299 kB&amp;chl=Images+-+1460+kB%7CHTML+-+67+kB%7CStylesheets+-+77+kB%7CScripts+-+367+kB%7CFonts+-+123+kB%7CVideo+-+193+kB%7COther+-+4+kB&amp;chma=|5&amp;chtt=Average+Bytes+per+Page+by+Content+Type+April+2016"
+	alt='In 2016, content is Images=1460kb, HTML=67kb, Stylesheets=77kb, Scripts=367kb, Fonts=123kb, Video=193 and Other=4kb for a total of 2299 kb'>
+
+   </div
+
+   
+   
+      <!-- slide -->
+   <div class="slide"> 
+     <header><h1>2010 vs 2016</h1></header> 
+     <section class="overlapping_pies">
+<div class="big_piechart"  style="
+    background-image: url(http://chart.googleapis.com/chart?chs=700x394&amp;cht=p&amp;chco=226daa&amp;is3D=true&amp;chd=t:1460,67,77,367,123,193,4&amp;chds=0,1460&amp;chdlp=b&amp;chma=|5);">
+
+    <!--<img  style="height: 24.43vh;
+    opacity: 0.5;
+    margin: auto;
+    display: inline-block;
+    border: 27.125vh solid #FFF;
+    transform: translate(198px, -80vh);
+}" id="bytesperpage2" class="chart" src="http://chart.googleapis.com/chart?chs=700x394&amp;cht=p&amp;chco=226daa&amp;chd=t:416,34,25,113,2,22&amp;chbg=transparent&amp;chds=0,416&amp;chdlp=b&amp;chma=|5" style="vertical-align: top;">-->
+ <div class="small_piechart"  style="
+    background-image: url(http://chart.googleapis.com/chart?chs=400x225&amp;cht=p&amp;chco=333333&amp;chd=t:416,34,25,113,2,22&amp;chbg=transparent&amp;chds=0,416&amp;chdlp=b&amp;chma=|5);" aria-label="for a total increase of 339% over less than 6 years"></div>
+    <span>339%</span>
+</div>
+   </div>
+   
+      <!-- slide 
+   <div class="slide"> 
+     <header><h1>2016 vs 2010</h1></header> 
+     <section class="overlapping_pies">
+<div class="big_piechart" style="background-image: url(http://chart.googleapis.com/chart?chs=700x394&amp;cht=p&amp;chco=226daa&amp;is3D=true&amp;chd=t:1460,67,77,367,123,193,4&amp;chds=0,1460&amp;chdlp=b&amp;chma=|5)">
+ <div class="small_piechart"  style="
+    background-image: url(http://chart.googleapis.com/chart?chs=400x225&amp;cht=p&amp;chco=333333&amp;chd=t:416,34,25,113,2,22&amp;chbg=transparent&amp;chds=0,416&amp;chdlp=b&amp;chma=|5&amp;chp=-.55);">339%</div>
+    </div>
+    </section>
+
+ </div>-->
+
+
+<div class="slide"> 
+<header><h1>Image Optimization</h1></header> 
+<section class="content"> 
+<dl class="hidden_dd">
+<dt>GZip</dt>
+<dd>GZip works best for text-based content, while providing little to no byte shrinkage on previously-compressed assets. SVG is a text-based image format. Minifying and GZipping SVG image and font files can greatly <a href="http://calendar.perfplanet.com/2014/tips-for-optimising-svg-delivery-for-the-web/">reduce their SVG file size</a>. Minify first. Then Gzip.</dd>
+<dt>Remove Image Metadata</dt>
+<dd>Cameras and software often add metadata to images that is not seen by the web user. This metadata can actually be a security risk by exposing geographical data. There’s free software that will <a href="https://itunes.apple.com/us/app/exifpurge/id784466108?mt=12">strip EXIF metadata</a> from multiple images at a time.</dd>
+<dt>Resize Images</dt>
+<dd>Serve the smallest image file for the screen size and resolution. <ul>
+<li> <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture">&lt;picture&gt;</a> element</li>
+<li><a href="http://www.sitepoint.com/how-to-build-responsive-images-with-srcset/">srcset</a> attribute</li><li>load small background images in CSS </support <a href="http://caniuse.com/#search=srcset">Internet Explorer</a>, consider using <a href="http://scottjehl.github.io/picturefill/">Picturefill</a> or JS-free <a href="https://www.smashingmagazine.com/2013/06/clown-car-technique-solving-for-adaptive-images-in-responsive-web-design/">Clown Car Technique</a>.</li>
+<li>Serve scaled images. Resizing images means <a href="http://blog.cloudfour.com/responsive-images-101-part-9-image-breakpoints/">downloading unneeded pixels</a> and take longer to decode and paint.
+</li></ul>
+</dd>
+<dt>Optimize Images</dt>
+<dd>Serve the smallest image size for the screen size and resolution. Images, no matter the size, should be compressed as much as possible without noticeably degrading the quality. Image compression programs include <a href="https://imageoptim.com/">ImageOptim</a> and <a href="https://pngmini.com/">ImageAlpha</a> for pngs. Can be automated with machine learning with <a href="https://www.instartlogic.com/blog/playing-smartvision-intelligent-image-optimization">SmartVision</a>.</dd>
+<dt>Use the Right Image Format</dt>
+<dd>Image types include SVG, GIF, JPEG, PNG, and WebP. 
+<ul>
+<li>GIF: Palette of less than 256 colors, like a comic, for transparency and for low quality animation</li>
+<li>SVG: Better than GIFS: Scalable, Animatable, unlimited color pallette</li>
+<li>PNG: When you need transparency and have more than 256 colors.</li>
+<li>JPEG: raster images</li>
+<li>JPEG with a CSS mask: when you need transparency on a raster image and PNG-24 file size is huge</li>
+<li> WebP:  Animation, transparency, and great resolution with small file size, but only supported in Blink. <a href="https://developers.google.com/speed/webp/faq#which_web_browsers_natively_support_webp">Test WebP</a></li>
+<li>JPEG-XR: For Edge</li>
+</ul>
+</dd>
+<dt>Reduce the Number of Images</dt>
+<dd>Reduce HTTP requests with sprites. Also, consider reducing actual number of images your page requires: is your image worth 1,000 words or does your site work better without it?</dd>
+<dt>Leverage CSS</dt>
+<dd>Leverage CSS to reduce image size and number of images:
+<ul><li><strong>Image Masking:</strong> use <a href="http://wegraphics.net/blog/articles/png-masking-how-to-dynamically-shape-any-image-on-your-website/">image masking</a> when you need a “transparent JPEG” without PNG-24 file size</li>
+<li><strong>CSS Effects:</strong> gradients, borders, outlines, rounded corners, shadows, etc. Create resolution-independent effects with minifiable &amp; gZippable text</li>
+<li><strong>Sprites:</strong> until HTTP/2 is fully supported  use <a href="https://www.smashingmagazine.com/2009/04/the-mystery-of-css-sprites-techniques-tools-and-tutorials/">image sprites</a> and background-position to reduce number of requests</li>
+<li><strong>Animation:</strong> when animating GIFs, consider CSS <a href="http://codepen.io/estelle/pen/LyItm">animation using the steps()</a> timing function and sprites as an alternative</li>
+<li><strong>Filters:</strong> use <a href="http://www.html5rocks.com/en/tutorials/filters/understanding-css/">CSS filter</a> effects instead of multiple versions of the same image if you want filters applied: save bytes, HTTP requests and time</li>
+<li><strong>Media Queries:</strong> Use media queries to serve hi-res images to hi-res devices</li>
+</ul></dd>
+</dl>
+<p><strong>Note:</strong> Include an <em>alt</em> attribute on all  foreground images, with empty <a href="http://webaim.org/techniques/alttext/"><em>alt</em> attribute</a> for decorative images.</p>
+
+<a class="pagelink" href="https://www.instartlogic.com/blog/image-optimization-tips-for-improved-web-performance">Image Optimization Tips</a>
+</section>
+</div> 
+ 
+  
+
+
+<div class="slide tweet">
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">It&#39;s Monday 3rd of April 2016 and... <br>First rule of ARIA, is still:<a href="https://t.co/bsiN798ARq">https://t.co/bsiN798ARq</a> <a href="https://t.co/gXwDXAKGjU">pic.twitter.com/gXwDXAKGjU</a></p>&mdash; Steve Faulkner (@stevefaulkner) <a href="https://twitter.com/stevefaulkner/status/717013674016247808">April 4, 2016</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
+
+
+
+
+
+   
+   </div>
+</div>
+<script src="../slides.js"></script>
+</body>
+</html>
