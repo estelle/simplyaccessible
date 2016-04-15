@@ -363,15 +363,16 @@ a.pagelink {
   background-position: center;
   background-size: cover; }
 
-.aria {
+.slide .aria {
   margin-left: 30vw;
   white-space: pre;
   padding: 20vh 0;
   letter-spacing: 0.25px;
   font-size: 8vh; }
-  .aria span {
+  .slide .aria i {
     color: #226DAA;
-    padding-right: 0.1rem; }
+    padding-right: 0.1rem;
+    font-style: normal; }
 
 .graph .arrow {
   display: flex; }
