@@ -111,7 +111,13 @@ pre em {
   visibility: hidden;
 }
 
-
+.photocredit {
+  position: absolute; 
+  right: 20px; 
+  bottom: 20px; 
+  background-color: rgba(255,255,255,0.5); 
+  padding: 0 5px;
+}
 div.example {
   display: block;
   padding: 10px 20px;
