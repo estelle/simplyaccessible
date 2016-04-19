@@ -135,6 +135,9 @@ fieldset.carousel {
 .carousel-radios li :checked + span {
   background-color: blue; }
 
+.carousel-radios li :focus + span {
+  outline: 1px solid rgba(0, 0, 0, 0.2); }
+
 /*/ ARROWS /*/
 .forward,
 .backward {

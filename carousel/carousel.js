@@ -29,7 +29,6 @@ function activateForwardAndBack(){
       moveForwardOrBack(e);
     });
     arrowButtons[i].addEventListener('keyup', function(e) {
-      console.dir(e);
       if(e.keyCode == 13) {
         moveForwardOrBack(e);
       }
