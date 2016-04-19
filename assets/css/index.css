@@ -275,6 +275,16 @@ small {
 .notes, .temphidden {
   display: none; }
 
+.slide.object:after {
+  content: '';
+  position: absolute;
+  top: 3rem;
+  right: 0;
+  height: 10vw;
+  width: 10vw;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2); }
+
 a.pagelink {
   position: absolute;
   top: 5px;
@@ -407,7 +417,7 @@ a.pagelink {
 .graph ul {
   text-align: left;
   display: flex;
-  height: 6vh;
+  height: 5vh;
   margin: 8vh;
   justify-content: space-around; }
   .graph ul li {
@@ -452,7 +462,7 @@ a.pagelink {
 
 .hidden_dd {
   margin-top: 0;
-  transform: translatey(-2vh);
+  transform: translatey(-1vh);
   max-height: 80vh;
   overflow: scroll; }
   .hidden_dd dt {

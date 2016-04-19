@@ -12,6 +12,9 @@
     padding: 0;
   input[type=radio], legend {
   }
+  ul {
+    list-style-type: none;
+  }
   li {
     background-color: $white;
     line-height: 1.667;

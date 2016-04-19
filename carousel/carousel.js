@@ -24,7 +24,20 @@ function activateForwardAndBack(){
     l = arrowButtons.length;
   for (; i < l; i++) {
     arrowButtons[i].removeAttribute('hidden');
+    arrowButtons[i].setAttribute('tabindex', '0');
     arrowButtons[i].addEventListener('click', function(e) {
+      moveForwardOrBack(e);
+    });
+    arrowButtons[i].addEventListener('keyup', function(e) {
+      console.dir(e);
+      if(e.keyCode == 13) {
+        moveForwardOrBack(e);
+      }
+    });
+  }
+}
+
+function moveForwardOrBack(e) {
       var name = e.target.dataset.carousel;
       console.log(name);
       var buttons = document.querySelectorAll('input[name=' + name + ']'),
@@ -33,9 +46,6 @@ function activateForwardAndBack(){
           newValue = (buttons.length + selectedButton + move) % buttons.length;
       buttons[newValue].checked = true;
       carouselChange(name, newValue);
-    });
-  }
-
 }
 
 function carouselChange (name, value) {

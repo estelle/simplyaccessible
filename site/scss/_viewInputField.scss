@@ -10,6 +10,7 @@
 @media screen and (min-width: $narrow) {
 .formControl-half {
   width: 50%;
+  float: left;
   display: inline-block;
   &:nth-of-type(odd) button {
     margin-right: 5px;

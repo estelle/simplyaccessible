@@ -36,16 +36,16 @@
 
 <form novalidate="" action="account.html">
 <div class="formControl">
-    <input type="tel" autocomplete="off" id="ccnumber" required aria-required="true" placeholder="15 to 16 digits">
+    <input type="tel" autocomplete="off" id="ccnumber" required aria-required="true" pxlaceholder="15 to 16 digits" class="masked">
     <label for="ccnumber"  class="empty">Credit Card Number</label>
 </div>
 
 <div class="formControl formControl-half">
-    <input type="tel" autocomplete="off" id="expiry" required aria-required="true" placeholder="mm/yy">
-    <label for="lastName"  class="empty">Expires</label>
+    <input type="tel" autocomplete="off" id="expiry" required aria-required="true" pxlaceholder="mm/yy" class="masked"  class="masked">
+    <label for="expiry"  class="empty">Expires</label>
 </div>
 <div class="formControl formControl-half">
-    <input type="tel" autocomplete="off" id="cvv" autocapitalize="none" aria-required="true" required>
+    <input type="tel" autocomplete="off" id="cvv" autocapitalize="none" aria-required="true" required  class="masked">
     <label  for="cvv"  class="empty">Security Code</label>
 </div>
 
@@ -61,14 +61,14 @@
 
             <h1>Billing Address</h1>
 <div class="formControl formControl-half">
-    <input type="text" autocomplete="off" maxlength="24" id="firstName" required aria-required="true" value="Tyrone">
-    <label for="firstName">First Name</label>
+    <input type="text" autocomplete="off" maxlength="24" id="firstName" required aria-required="true">
+    <label for="firstName" class="empty">First Name</label>
     <!--<button class="icon clear"><span>Clear First Name</span></button>-->
 </div>
 
 <div class="formControl formControl-half">
-    <input type="text" autocomplete="off" maxlength="24" id="lastName" required aria-required="true" value="Smith">
-    <label for="lastName">Last Name</label>
+    <input type="text" autocomplete="off" maxlength="24" id="lastName" required aria-required="true">
+    <label for="lastName" class="empty">Last Name</label>
     <!--<button class="icon clear"><span>Clear last name</span></button>-->
 </div>
 
@@ -278,6 +278,7 @@
 
   <div class="view-modal-portal"></div>
 
-<script src="js/site.js"></script>
+<script src="js/site.js" async></script>
+<script src="js/inputmask.js" async></script>
 </body>
 </html>

@@ -11,6 +11,7 @@ Copyright:  CC-SA-NC-BY - Creative Commons Attribution-NonCommercial-ShareAlike
 Based on: http://estelle.github.com/slides 
 -->    
 <link rel="stylesheet" href="assets/css/index.css">
+ <base target="play"/>
 </head>
 
 <body> 
@@ -96,7 +97,7 @@ Based on: http://estelle.github.com/slides
 
 
 <div class="slide graph svg">
-<header><h1>Disability is a spectrum</h1></header>
+<header><h1>We all benefit from the <abbr title="Americans with Disabilities Act">ADA</abbr></h1></header>
 	
 <ul class="">
 	<li><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 96 120" enable-background="new 0 0 96 96" xml:space="preserve"><path d="M90,79h-8V49c0-1.1-0.9-2-2-2h-7.408c-1.424-4.4-3.699-8.416-6.619-11.86C65.973,35.092,66,35.052,66,35V17c0-1.1-0.9-2-2-2  H26V5c0-1.1-0.896-2-2-2h-6c-1.104,0-2,0.9-2,2s0.896,2,2,2h4v20c0,0.056,0.028,0.1,0.032,0.156C11.288,33.18,4,44.668,4,57.836  C4,77.229,19.772,93,39.16,93c19.388,0,35.164-15.771,35.164-35.164c0-2.34-0.248-4.624-0.68-6.836H78v30c0,1.1,0.9,2,2,2h10  c1.104,0,2-0.9,2-2S91.1,79,90,79z M26,19h36v12.156c-6.152-5.272-14.12-8.48-22.84-8.48c-4.656,0-9.088,0.924-13.16,2.584V19z   M39.16,63.836c-3.308,0-5.996-2.691-5.996-6s2.688-6,5.996-6c3.312,0,6.004,2.691,6.004,6S42.472,63.836,39.16,63.836z"></path><path d="M41.16,57.836c0,1.105-0.895,2-2,2s-2-0.895-2-2s0.895-2,2-2S41.16,56.73,41.16,57.836z"></path><text x="0" y="111" fill="#000000" font-size="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">Created by iconsmind.com</text><text x="0" y="116" fill="#000000" font-size="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">from the Noun Project</text></svg></li>
@@ -116,8 +117,8 @@ Based on: http://estelle.github.com/slides
 </div>
 
 <div class="slide graph">
-
-<div class="arrow">
+<header><h1>Disability is a spectrum</h1></header>
+<div class="arrow" style="margin-top: 30px">
 		<div>permanent</div>
 		<div class="border"></div>
 		<div>situational</div>
@@ -204,8 +205,8 @@ Based on: http://estelle.github.com/slides
      <header>
      	<h1>April 2016</h2>
      </header> 
-    <img style="height: 80vh; display: inline-block; margin: auto;" id="bytesperpage" class="chart" src="http://chart.googleapis.com/chart?chs=700x394&amp;cht=p&amp;chco=226daa&amp;is3D=true&amp;chd=t:1460,67,77,367,123,193,4&amp;chds=0,1460&amp;chdlp=b&amp;chdl=total 2299 kB&amp;chl=Images+-+1460+kB%7CHTML+-+67+kB%7CStylesheets+-+77+kB%7CScripts+-+367+kB%7CFonts+-+123+kB%7CVideo+-+193+kB%7COther+-+4+kB&amp;chma=|5&amp;chtt=Average+Bytes+per+Page+by+Content+Type+April+2016"
-	alt='In 2016, content is Images=1460kb, HTML=67kb, Stylesheets=77kb, Scripts=367kb, Fonts=123kb, Video=193 and Other=4kb for a total of 2299 kb'>
+    <img style="height: 80vh; display: inline-block; margin: auto;" id="bytesperpage" class="chart" src="http://chart.googleapis.com/chart?chs=700x394&amp;cht=p&amp;chco=226daa&amp;is3D=true&amp;chd=t:1463,66,78,360,124,200,4&amp;chds=0,1463&amp;chdlp=b&amp;chdl=total 2301 kB&amp;chl=Images+-+1463+kB%7CHTML+-+66+kB%7CStylesheets+-+78+kB%7CScripts+-+360+kB%7CFonts+-+124+kB%7CVideo+-+200+kB%7COther+-+4+kB&amp;chma=|5&amp;chtt=Average+Bytes+per+Page+by+Content+Type+April+2016"
+	alt='In 2016, content is Images=1463kb, HTML=66kb, Stylesheets=78kb, Scripts=360kb, Fonts=124kb, Video=200 and Other=4kb for a total of 2301 kb'>
 
    </div
 
@@ -305,59 +306,53 @@ Based on: http://estelle.github.com/slides
 <section class="content">
 <dl class="hidden_dd">
 <dt>Minimize request size</dt>
- <dd></dd>
-<dt>Leverage browser caching</dt>
- <dd></dd>
+ <dd>GZip all requests. </dd>
+<dt>Leverage browser caching.</dt>
+ <dd>Include caching headers for all requests with a future date so previously fetched responses can be reused instead of refetched.</dd>
 <dt>Specify a cache validator</dt>
- <dd></dd>
-<dt>Minify CSS</dt>
- <dd></dd>
-<dt>Minify JavaScript</dt>
- <dd></dd>
+ <dd>Specify a <code>Last-Modified</code> or ETag header to enable cache validation. ETags provide revalidation tokens automatically sent by client to check if there are file changes since last requested. </dd>
+<dt>Minify CSS, JS &amp; HTML</dt>
+ <dd>Removing unnecessary whitespace saves bandwidth</dd>
 <dt>Defer parsing of JavaScript</dt>
- <dd></dd>
+ <dd>inlcude <code>async</code> attribute in your <code>&lt;script&gt;</code> tags so client can continue downloading assets instead of waiting as scripts are downloaded, parsed and excecuted.</dd>
 <dt>Optimize images</dt>
- <dd></dd>
+ <dd>Choose best format and compression on a per image basis include: type of data being encoded, image format capabilities, quality settings, resolution, and more. Leverage SVG and CSS. See previous page.</dd>
 <dt>Specify a character set</dt>
- <dd></dd>
+ <dd>Including a content-type header, such as <code>Content-Type: text/html; charset=UTF-8</code> reduces browser processing. Can start parsing HTML immediately when it knows which character set it has.</dd>
 <dt>Remove query strings from static resources</dt>
- <dd></dd>
+ <dd>Resources with a "?" in the URL are not cached by some proxy caching servers</dd>
 <dt>Specify a Vary: Accept-Encoding header</dt>
- <dd></dd>
+ <dd>In case client doesn't support compression, tells proxy server to store both compressed and uncompressed versions.</dd>
 <dt>Avoid CSS @import</dt>
- <dd></dd>
+ <dd>Only starts downing imported file once encountered rather than in parallel.</dd>
 <dt>Avoid a character set in the meta tag</dt>
- <dd></dd>
+ <dd>Better to include it in HTTP Content-Type header (IE8 rule)</dd>
 <dt>Avoid bad requests</dt>
- <dd></dd>
+ <dd>404 and 410 errors waste time. If requests are for blocking resources, it becomes a more serious problem.</dd>
 <dt>Avoid landing page redirects</dt>
- <dd></dd>
+ <dd>If your site requires redirects, do them server-side not client side, to reduce round trip requests. Removing HTTP redirects removes extra round trips.</dd>
 <dt>Combine images into CSS sprites</dt>
  <dd></dd>
 <dt>Enable Keep-Alive</dt>
- <dd></dd>
+ <dd>HTTP persistent connections allows a TCP connection to send and receive multiple HTTP requests, reducing latency for subsequent requests.</dd>
 <dt>Enable compression</dt>
- <dd></dd>
-<dt>Inline Small CSS</dt>
- <dd></dd>
-<dt>Inline Small JavaScript</dt>
- <dd></dd>
-<dt>Minify HTML</dt>
+ <dd>GZip!</dd>
+<dt>Inline Small CSS &amp; JS</dt>
  <dd></dd>
 <dt>Minimize redirects</dt>
- <dd></dd>
+ <dd>Minimizing redirects removes additional RTTs and wait time for users.</dd>
 <dt>Optimize the order of styles and scripts</dt>
  <dd></dd>
 <dt>Prefer asynchronous resources</dt>
- <dd></dd>
+ <dd>Many JS libraries and frameworks were originally written as synchronous scripts, but now have asynchronous versions. Use the asynchronous versions. </dd>
 <dt>Put CSS in the document head</dt>
  <dd></dd>
 <dt>Serve resources from a consistent URL</dt>
  <dd></dd>
 <dt>Serve scaled images</dt>
- <dd></dd>
+ <dd>Properly sized images saves bandwidth.</dd>
 <dt>Specify image dimensions</dt>
- <dd></dd>
+ <dd>Enables rendering page before images are downloaded. Without proper dimensions, browser will need to reflow and repaint upon image downloaded.</dd>
 </dl>
 <a class="pagelink" href="https://developers.google.com/speed/docs/insights/about#send-us-your-feedback">Page Speed</a>
 </div>
@@ -400,8 +395,7 @@ Remove render-blocking JavaScript</dt>
  <dd></dd>
 
 
-<dt>
-Use asynchronous scripts</dt>
+<dt>Use asynchronous scripts</dt>
  <dd>Instead of blocking loading while waiting for scripts to finish downloading before the page renders, script are downloadeded in the background</dd>
 
  </dl>
@@ -557,15 +551,50 @@ Content interprable by UAs, including AT.</p>
 <object data="http://www.webpagetest.org/result/160406_HP_14ZZ/1/details/"></object>
 </div>
 
+<div class="slide object">
+<object data="http://www.webpagetest.org/result/160418_TW_NN/5/details/"></object>
+</div>
+
+
+<div class="slide object">
+<object data="http://www.webpagetest.org/video/compare.php?tests=160417_WM_114N%2C160417_7M_114P&thumbSize=200&ival=500&end=visual"></object>
+</div>
 
 <div class="slide" style="background-image: url(assets/images/scaffolding.jpg); background-size: cover;" aria-label="Image of bay bridge's scaffolding">
 <span class="photocredit">Photo: <a href="https://www.flickr.com/photos/toasty/">Kenneth Lu</a></span>
+</div>
+
+
+<div class="slide object" style="background: url(assets/images/visalogin.png) no-repeat center 0;">
+<object data="https://secure.checkout.visa.com"></object>
+<a href="https://secure.checkout.visa.com" class="pagelink">Original Site</a>
+</div>
+
+
+<div class="slide object" style="background: url(assets/images/visalogin2.png) no-repeat center 0;">
+<object data="site/"></object>
+<a href="site/" class="pagelink">My Version</a>
 </div>
 
 <div class="slide intro">
 <header><h1>Solutions</h1></header>
 </div>
 
+<div class="slide object">
+<object data="http://robinherbots.github.io/jquery.inputmask/"></object>
+<a href="http://robinherbots.github.io/jquery.inputmask/" class="pagelink"></a>
+<img src="assets/images/inputmasksize.png" style="position:absolute; bottom: 10px; right: 10px;" alt="jquery at 37.7kb and input masking script is 29.6kb">
+</div>
+
+<div class="slide object">
+<object data="noreactvisacarousel.txt"></object>
+<a href="" class="pagelink"></a>
+</div>
+
+<div class="slide object">
+<object data="carouselA.txt"></object>
+<a href="" class="pagelink"></a>
+</div>
 
 <div class="slide tweet" aria-label="First rule of ARIA: If you can use a native HTML element or attribute with the semantics and behaviour you require already built in, instead of re-purposing an element and adding an ARIA role, state or property to make it accessible, then do so. Under what circumstances may this not be possible? If the feature is available in HTML [HTML51] but it is not implemented or it is implemented, but accessibility support is not. If the visual design constraints rule out the use of a particular native element, because the element cannot be styled as required. If the feature is not currently available in HTML.">
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">It&#39;s Monday 3rd of April 2016 and... <br>First rule of ARIA, is still:<a href="https://t.co/bsiN798ARq">https://t.co/bsiN798ARq</a> <a href="https://t.co/gXwDXAKGjU">pic.twitter.com/gXwDXAKGjU</a></p>&mdash; Steve Faulkner (@stevefaulkner) <a href="https://twitter.com/stevefaulkner/status/717013674016247808">April 4, 2016</a></blockquote>
