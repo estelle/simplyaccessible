@@ -20,4 +20,16 @@
 	width: 10vw;
 	border-radius: 50%;
 	background-color:rgba(255,255,255,0.2);
+	outline: 1px solid rgba(0,0,0,0.05);
 	}
+.object img.bytes {
+	position: absolute; 
+	bottom: 10px; 
+	right: 10px; 
+	border: 1px solid #ccc;
+}
+object.enlarge {
+	width: 50%;
+	transform-origin: top left;
+	transform: scale(1.625);
+}
